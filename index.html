@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名の無いタコスとバーガー屋 | 次回の出店案内</title>
+    
+    <!-- OGP Settings -->
+    <meta property="og:title" content="名の無いタコスとバーガー屋 | 次回の出店案内">
+    <meta property="og:description" content="旅するタコスとバーガー屋の次回の出店予定とメニューをご案内します。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/sample_burger.jpg"> <!-- 実際の公開時は絶対URLに変更してください -->
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <p class="subtitle" id="shop-subtitle"></p>
+        <h1 class="shop-name" id="shop-name"></h1>
+    </header>
+
+    <main class="container">
+        <!-- お知らせ -->
+        <section id="announcement-section" class="announcement hidden">
+            <p id="announcement-text"></p>
+        </section>
+
+        <!-- 次回の出店情報 (メイン) -->
+        <section id="next-event-section" class="section">
+            <!-- JSで描画されます -->
+        </section>
+
+        <!-- 当日楽しめる料理 -->
+        <section id="foods-section" class="section hidden">
+            <h2 class="section-title">TODAY'S MENU <span class="ja">当日楽しめる料理</span></h2>
+            <div id="foods-container" class="foods-grid">
+                <!-- JSで描画されます -->
+            </div>
+        </section>
+
+        <!-- 今月のカレンダー -->
+        <section id="calendar-section" class="section">
+            <h2 class="section-title">SCHEDULE <span class="ja">今月の営業スケジュール</span></h2>
+            
+            <div class="calendar-wrapper">
+                <div class="calendar-header">
+                    <button class="cal-btn" id="prev-month">&lt;</button>
+                    <div class="cal-month-title" id="calendar-month-title">2026年 10月</div>
+                    <button class="cal-btn" id="next-month">&gt;</button>
+                </div>
+                
+                <div class="calendar-legend">
+                    <div class="legend-item"><span class="legend-color platts"></span> ぷらっつなかせん</div>
+                    <div class="legend-item"><span class="legend-color sunk"></span> サンキッチン</div>
+                </div>
+
+                <div class="calendar-grid" id="calendar-grid">
+                    <!-- JSで描画されます -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- よく行く出店場所などの固定枠4つ -->
+        <section id="custom-locations-section" class="section">
+            <h2 class="section-title">REGULAR PLACES <span class="ja">主な出店場所・営業時間</span></h2>
+            <div id="custom-locations-container" class="locations-grid">
+                <!-- JSで描画されます -->
+            </div>
+        </section>
+
+        <!-- 出店情報がない場合 -->
+        <section id="empty-state-section" class="section empty-state hidden">
+            <p>次回の出店は準備中です。<br>決まり次第こちらでお知らせします。</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 名の無いタコスとバーガー屋</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="app.js"></script>
+</body>
+</html>
